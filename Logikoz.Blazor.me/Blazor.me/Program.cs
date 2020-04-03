@@ -1,20 +1,12 @@
-using System.Threading.Tasks;
-
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Blazor.Hosting;
 
 namespace Blazor.me
 {
     public class Program
     {
-        public static async Task Main(string[] args)
-        {
-            var builder = WebAssemblyHostBuilder.CreateDefault(args);
-            builder.RootComponents.Add<App>("app");
+        public static void Main(string[] args) => CreateHostBuilder(args).Build().Run();
 
-            builder.Services.AddBaseAddressHttpClient();
-
-            await builder.Build().RunAsync();
-        }
+        public static IWebAssemblyHostBuilder CreateHostBuilder(string[] args) =>
+            BlazorWebAssemblyHost.CreateDefaultBuilder().UseBlazorStartup<Startup>();
     }
 }
