@@ -1,0 +1,29 @@
+{
+	"iisSettings": {
+		"anonymousAuthentication": true,
+		"iisExpress": {
+			"applicationUrl": "http://localhost:57431",
+			"sslPort": 44329
+		},
+		"windowsAuthentication": false
+	},
+	"profiles": {
+		"IIS Express": {
+			"commandName": "IISExpress",
+			"environmentVariables": {
+				"ASPNETCORE_ENVIRONMENT": "Development"
+			},
+			"inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}",
+			"launchBrowser": true
+		},
+		"Blazor.me": {
+			"applicationUrl": "https://localhost:5001;http://192.168.1.10:5000",
+			"commandName": "Project",
+			"environmentVariables": {
+				"ASPNETCORE_ENVIRONMENT": "Development"
+			},
+			"inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}",
+			"launchBrowser": true
+		}
+	}
+}
